@@ -9,21 +9,31 @@
     --color-light-green: #79b259;
     --color-dark-brown: #74543d;
     --color-light-brown: #cd8a56;
-    --color-light-grey: #f4f4f2
+    --color-light-grey: #f4f4f2;
+    --color-darker-grey: #d4d4d2;
 }
 
 img {
     height: auto;
     width: auto;
-    max-height: inherit;
-    max-width: inherit;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content-wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 header {
-    background: linear-gradient(to top, rgba(212,212,210,1) 0%, rgba(244,244,242,1) 100%);
+    background: linear-gradient(to top, var(--color-darker-grey) 0%, var(--color-light-grey) 100%);
     -webkit-box-shadow: 0 0 16px 0 rgba(0,0,0,0.59);
     -moz-box-shadow: 0 0 16px 0 rgba(0,0,0,0.59);
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.59);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 header .header-container {
@@ -46,7 +56,7 @@ header .header-container nav {
 }
 header .header-container #main-navigation {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     margin: 0;
     padding: 0;
 }
@@ -70,3 +80,26 @@ header .header-container #main-navigation .nav-item a.current-page {
 header .header-container #main-navigation .nav-item a:hover {
     color: var(--color-light-green);
 }
+
+.cta-button {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-dark-brown);
+    border: 2px solid var(--color-dark-brown);
+    border-radius: 10px;
+    padding: 10px 25px;
+    transition: 300ms cubic-bezier(0.79, 0.24, 0.23, 0.75);
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: var(--color-dark-brown);
+}
+
+
+
