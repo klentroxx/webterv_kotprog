@@ -18,7 +18,7 @@ A projekt célja megvalósítani egy bevásárló listát csak és kizárólag n
 
 | Fájlnév | Funkció |
 | ------- | ------- |
-| fooldal.css | Főoldali egyedi stíluslapja |
+| fooldal.css | Főoldal egyedi stíluslapja |
 | bevasarlo_lista.css | Bevásárló lista egyedi stíluslapja |
 | bevasarlas_cikk.css | Bevásárlási szokások egyedi stíluslapja |
 | uj_hozzaadasa.css | Új listaelem egyedi stíluslapja |
