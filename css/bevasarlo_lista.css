@@ -1,0 +1,37 @@
+
+body{
+    background-color: lightblue;
+}
+
+table{
+    font-family: Calibri, serif;
+    margin: auto;
+}
+
+th{
+    padding: 15px;
+    font-size: x-large;
+}
+
+td{
+    padding: 15px;
+    font-size: larger;
+    text-align: left;
+}
+
+.amount{
+    text-align: right;
+}
+
+tr:nth-child(even){
+    background-color: lightyellow;
+}
+
+tr:nth-child(odd){
+    background-color: lightgreen;
+}
+
+td:last-of-type{
+    font-size: large;
+    color: red;
+}
