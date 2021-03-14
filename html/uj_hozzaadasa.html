@@ -35,5 +35,21 @@
         </nav>
     </div>
 </header>
+
+    <form action="uj_cikk_felvetele.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <label>Árucikk: <input type="text" name="arunev" size="30px" /></label> <br />
+        <label>Darabszám: <input type="number" name="darab" required /></label> <br />
+
+        <fieldset>
+            <legend>Mértékegység</legend>
+
+            <label for="kg">kg</label>
+            <input type="checkbox" name="kg" id="kg">
+            <label for="db">Darab</label>
+            <input type="checkbox" name="db" id="db">
+        </fieldset>
+
+        <input type="submit" name="submit" value="Elküld">
+    </form>
 </body>
 </html>

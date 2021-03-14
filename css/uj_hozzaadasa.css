@@ -1,0 +1,18 @@
+
+input{
+    margin: 10px;
+}
+
+input:required{
+    background-color: orangered;
+}
+
+input:focus{
+    background-color: lightblue;
+}
+
+form{
+    font-family: Calibri, serif;
+    font-size: large;
+    width: fit-content;
+}
