@@ -1,0 +1,17 @@
+
+.picture{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maptext{
+    font-family: Calibri, serif;
+    font-size: larger;
+    text-shadow: 2px 2px #d4d4d2;
+
+
+}
