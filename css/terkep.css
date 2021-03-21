@@ -10,8 +10,7 @@
 
 .maptext{
     font-family: Calibri, serif;
-    font-size: larger;
+    font-size: 2em;
     text-shadow: 2px 2px #d4d4d2;
-
-
+    margin: 30px 0;
 }
