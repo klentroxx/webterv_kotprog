@@ -5,7 +5,7 @@ include_once "reg_session.php";
 if (isset($_POST["login"])) {
     if (isset($_POST["unamelogin"]) && isset($_POST["pwlogin"])) {
         $loggedin = false;
-        foreach ($_SESSION["registeredUsers"] as $userobj) {
+        foreach ($_SESSION["regisztraltFelhasznalok"] as $userobj) {
             if ($userobj->getUsername() == $_POST["unamelogin"] && $userobj->getPassword() == $_POST["pwlogin"]) {
                 $loggedin = true;
                 $_SESSION["user"] = $userobj;
@@ -57,7 +57,7 @@ if (isset($_POST["logout"])) {
                         <input required type="text" id="unamelogin" name="unamelogin" tabindex="1"/>
                         <br/>
                         <br/>
-                        <label for="pwlogin">Felhasználónév:</label>
+                        <label for="pwlogin">Jelszó:</label>
                         <br/>
                         <input required type="password" id="pwlogin" name="pwlogin" tabindex="2" placeholder="********"/>
                         <br/>
@@ -68,11 +68,11 @@ if (isset($_POST["logout"])) {
 
             ';
             } else {
-                echo '
-                    //user kepe
-                    <p>Név: ' . $_SESSION["user"]->getName();
+                var_dump($_SESSION["user"]->getImage());
+                echo !empty($_SESSION["user"]->getImage()) ? '<img src="/profil/' . $_SESSION["user"]->getImage() . '"/>' : "&nbsp;" .  '    
+                    <p>Név: ' . $_SESSION["user"]->getName() .
                 '</p>
-                    <p>Felhasználónév: ' . $_SESSION["user"]->getUsername();
+                    <p>Felhasználónév: ' . $_SESSION["user"]->getUsername() .
                 '</p>
                     <form id="logout" action="index.php" method="post" enctype="multipart/form-data">
                     <input type="submit" value="Kijelentkezés" name="logout"/>
