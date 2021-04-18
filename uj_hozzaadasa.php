@@ -1,3 +1,7 @@
+<?php
+include_once "tartalom.php";
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -5,39 +9,14 @@
     <meta name="author" content="Fityó András és Körmöczi Róbert" />
     <meta name="description" content="Ez az oldal egy bevásárló listát valósít meg." />
     <title>Új termék hozzáadása</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/uj_hozzaadasa.css" />
-    <link rel="icon" href="../img/favicon.ico" />
-    <link rel="stylesheet" media="print" href="../css/print.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/uj_hozzaadasa.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" media="print" href="css/print.css" />
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="../img/shopping_bag.png" alt="Logo">
-            </a>
-        </div>
-        <nav>
-            <ul id="main-navigation">
-                <li class="nav-item">
-                    <a href="terkep.html">Szegedi áruházak</a>
-                </li>
-                <li class="nav-item">
-                    <a href="bevasarlo_lista.html">Bevásárló lista</a>
-                </li>
-                <li class="nav-item">
-                    <a href="uj_hozzaadasa.html" class="current-page">Új listaelem</a>
-                </li>
-                <li class="nav-item">
-                    <a href="bevasarlas_cikk.html">Bevásárlási szokások</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-    <form action="uj_cikk_felvetele.php" method="post" enctype="multipart/form-data" autocomplete="off">
+<?php get_header("uj_hozzaadasa"); ?>
+   <form action="uj_cikk_felvetele.php" method="post" enctype="multipart/form-data" autocomplete="off">
         <label for="arunev">Árucikk: <input type="text" name="arunev" id="arunev" size="30" /></label> <br />
         <label for="darab">Darabszám: <input type="number" name="darab" id="darab" required /></label> <br />
         <label>rejtett: <input type=hidden name="rejtett" /></label> <br />

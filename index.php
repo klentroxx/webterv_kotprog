@@ -1,3 +1,7 @@
+<?php
+include_once "tartalom.php";
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -5,41 +9,17 @@
     <meta name="author" content="Fityó András és Körmöczi Róbert"/>
     <meta name="description" content="Ez az oldal egy bevásárló listát valósít meg."/>
     <title>Bevásárló lista főoldal</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" href="../css/fooldal.css"/>
-    <link rel="icon" href="../img/favicon.ico"/>
-    <link rel="stylesheet" media="print" href="../css/print.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/fooldal.css"/>
+    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" media="print" href="css/print.css" />
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="../img/shopping_bag.png" alt="Logó">
-            </a>
-        </div>
-        <nav>
-            <ul id="main-navigation">
-                <li class="nav-item">
-                    <a href="terkep.html">Szegedi áruházak</a>
-                </li>
-                <li class="nav-item">
-                    <a href="bevasarlo_lista.html">Bevásárló lista</a>
-                </li>
-                <li class="nav-item">
-                    <a href="uj_hozzaadasa.html">Új listaelem</a>
-                </li>
-                <li class="nav-item">
-                    <a href="bevasarlas_cikk.html">Bevásárlási szokások</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php get_header("index");?>
 <main>
     <section id="home-intro-section">
         <div class="background-image-box">
-            <img src="../img/food_store.jpg" alt="Intro kép">
+            <img src="img/food_store.jpg" alt="Intro kép">
         </div>
         <div class="content-wrap">
             <h1>Bevásárló lista</h1>
@@ -52,7 +32,7 @@
             <article>
                 <div class="article-wrap">
                     <div class="image-box">
-                        <img src="../img/people_in_store.jpg" alt="Újságcikk kép">
+                        <img src="img/people_in_store.jpg" alt="Újságcikk kép">
                     </div>
                     <div class="article-info-wrap">
                         <h3>Vásárlási szokások a koronavírus járvány idején</h3>
@@ -63,7 +43,7 @@
                             szeretnénk kicsit részletesebben beszélni.
                         </strong>
                         <div class="button_box">
-                            <a href="bevasarlas_cikk.html" class="cta-button">Tovább a teljes cikkhez</a>
+                            <a href="bevasarlas_cikk.php" class="cta-button">Tovább a teljes cikkhez</a>
                         </div>
                     </div>
                 </div>
@@ -74,22 +54,10 @@
     <section id="table-section">
         <div class="content-wrap">
             <h2>A bevásárlólista megjelenése:</h2>
-            <iframe src="bevasarlo_lista.html"></iframe>
+            <iframe src="bevasarlo_lista.php"></iframe>
         </div>
     </section>
 </main>
-<footer>
-    <div class="footer-container">
-        <div class="content-wrap">
-            <div class="footer-wrapper">
-                <p>
-                    Készítette:
-                    <span class="name-span" title="CC6A87">Fityó András</span> és
-                    <span class="name-span" title="WT8AYY">Körmöczi Róbert</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<?php get_footer(); ?>
 </body>
 </html>
