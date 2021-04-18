@@ -16,7 +16,7 @@ if (isset($_POST["login"])) {
             die("<strong>Hiba: </strong> Hibás adat. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
         }
     }else{
-        die("<strong>Hiba: </strong> Valamelyik mező nincs kitöltve. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
+        die("<strong>Hiba: </strong> Valamelyik mező nincs kitöltve! <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
     }
 
 }
