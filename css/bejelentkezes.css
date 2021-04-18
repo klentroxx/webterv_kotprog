@@ -64,3 +64,6 @@ span.required {
     color: #FF0000;
 }
 
+img {
+    max-width: 100px;
+}

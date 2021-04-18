@@ -35,7 +35,7 @@ if (isset($_POST["logout"])) {
     <meta name="description" content="Ez az oldal egy bevásárló listát valósít meg."/>
     <title>Bejelentkezés</title>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/regisztracio.css"/>
+    <link rel="stylesheet" href="css/bejelentkezes.css"/>
     <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" media="print" href="css/print.css"/>
 </head>
@@ -68,13 +68,12 @@ if (isset($_POST["logout"])) {
 
             ';
             } else {
-                var_dump($_SESSION["user"]->getImage());
-                echo !empty($_SESSION["user"]->getImage()) ? '<img src="/profil/' . $_SESSION["user"]->getImage() . '"/>' : "&nbsp;" .  '    
+                echo (!empty($_SESSION["user"]->getImage()) ? '<img src="profil/' . $_SESSION["user"]->getImage() . '"/>' : "&nbsp;") .  '    
                     <p>Név: ' . $_SESSION["user"]->getName() .
                 '</p>
                     <p>Felhasználónév: ' . $_SESSION["user"]->getUsername() .
                 '</p>
-                    <form id="logout" action="index.php" method="post" enctype="multipart/form-data">
+                    <form id="logout" action="bejelentkezes.php" method="post" enctype="multipart/form-data">
                     <input type="submit" value="Kijelentkezés" name="logout"/>
                     <br/>
                     <br/>
