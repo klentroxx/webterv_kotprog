@@ -22,7 +22,7 @@ include_once "reg_session.php";
         <label for="arunev">Árucikk: <input type="text" name="arunev" id="arunev" size="30" /></label> <br />
         <label for="darab">Darabszám: <input type="number" name="darab" id="darab" required /></label> <br />
         <label>rejtett: <input type=hidden name="rejtett" /></label> <br />
-        <label for="best-before">Lejárati dátum: <input type="date" id="best-before"></label> <br />
+        <label for="best-before">Lejárati dátum: <input type="date" id="best-before" value="<?php echo date("Y-m-d") ?>"></label> <br />
         <label for="important">Nagyon fontos? <input type="checkbox" id="important"></label>
         <label for="reset"><input type="reset" id="reset"></label>
         <fieldset>

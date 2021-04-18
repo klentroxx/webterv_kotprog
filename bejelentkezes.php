@@ -70,7 +70,7 @@ if (isset($_POST["logout"])) {
 
             ';
             } else {
-                echo (!empty($_SESSION["user"]->getImage()) ? '<img src="profil/' . $_SESSION["user"]->getImage() . '"/>' : "&nbsp;") .  '    
+                echo (!empty($_SESSION["user"]->getImage()) ? '<img src="profil/' . $_SESSION["user"]->getImage() . '" alt="Felhasználó kép"/>' : "&nbsp;") .  '    
                     <p>Név: ' . $_SESSION["user"]->getName() .
                 '</p>
                     <p>Felhasználónév: ' . $_SESSION["user"]->getUsername() .
