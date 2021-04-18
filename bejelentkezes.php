@@ -15,6 +15,8 @@ if (isset($_POST["login"])) {
         if (!$loggedin) {
             die("<strong>Hiba: </strong> Hibás adat. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
         }
+    }else{
+        die("<strong>Hiba: </strong> Valamelyik mező nincs kitöltve. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
     }
 
 }
@@ -74,7 +76,7 @@ if (isset($_POST["logout"])) {
                 '</p>
                     <p>Felhasználónév: ' . $_SESSION["user"]->getUsername() .
                 '</p>
-                    <form id="logout" action="index.php" method="post" enctype="multipart/form-data">
+                    <form id="logout" action="bejelentkezes.php" method="post" enctype="multipart/form-data">
                     <input type="submit" value="Kijelentkezés" name="logout"/>
                     <br/>
                     <br/>
