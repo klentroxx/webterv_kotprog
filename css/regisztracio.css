@@ -21,15 +21,15 @@ legend {
     flex-flow: column nowrap;
 }
 
-.input_box label {
+label {
     margin-bottom: 5px;
 }
 
-.input_box input[type=number],
-.input_box input[type=tel],
-.input_box input[type=text],
-.input_box input[type=email],
-.input_box input[type=password] {
+input[type=number],
+input[type=tel],
+input[type=text],
+input[type=email],
+input[type=password] {
     margin-bottom: 15px;
     display: block;
     max-width: 300px;
@@ -39,11 +39,11 @@ legend {
     background: #EEEEEE;
 }
 
-.input_box input[type=number]:focus,
-.input_box input[type=tel]:focus,
-.input_box input[type=text]:focus,
-.input_box input[type=email]:focus,
-.input_box input[type=password]:focus {
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
     background: #FFFFFF;
     border-color: var(--color-light-green);
     outline: none;
