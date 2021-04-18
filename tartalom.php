@@ -24,6 +24,12 @@ function get_header($current_page)
                     <li class="nav-item">
                         <a href="bevasarlas_cikk.php" <?php echo $current_page === "bevasarlas_cikk" ? 'class="current-page"' : '' ?>>Bevásárlási szokások</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="regisztracio.php" <?php echo $current_page === "regisztracio.php" ? 'class="current-page"' : '' ?>>Regisztráció</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bejelentkezes.php" <?php echo $current_page === "bejelentkezes.php" ? 'class="current-page"' : '' ?>>Bejelentkezés</a>
+                    </li>
                 </ul>
             </nav>
         </div>
