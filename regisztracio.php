@@ -9,3 +9,4 @@ while (($line = fgets($file)) !== false) {
     array_push($_SESSION["regisztraltFelhasznalok"], $newUser);
 }
 fclose($file);
+
