@@ -13,7 +13,7 @@ if(isset($_POST["login"])){
             }
         }
         if(!$loggedin){
-            die("<strong>Hiba: </strong> Hibás adat. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>")
+            die("<strong>Hiba: </strong> Hibás adat. <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
         }
    }
 
@@ -73,11 +73,13 @@ if(isset($_POST["logout"])){
                 </form>
 
             ';
-        }else{
-                echo '
+        }else {
+            echo '
                     //user kepe
-                    <p>Név: '.$_SESSION["user"]->getName()'</p>
-                    <p>Felhasználónév: '.$_SESSION["user"]->getUsername()'</p>
+                    <p>Név: ' . $_SESSION["user"]->getName();
+            '</p>
+                    <p>Felhasználónév: ' . $_SESSION["user"]->getUsername();
+            '</p>
                     <form id="logout" action="index.php" method="post" enctype="multipart/form-data">
                     <input type="submit" value="Kijelentkezés" name="logout"/>
                     <br/>
@@ -85,7 +87,7 @@ if(isset($_POST["logout"])){
                     </form>
                 ';
 
-        {
+        }
     ?>
 </div>
 </main>
