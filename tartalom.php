@@ -1,6 +1,11 @@
 <?php
 function get_header($current_page)
 {
+    var_dump($_SESSION["user"]);
+    if (isset($_POST["menu_logout"])) {
+        session_unset();
+        session_destroy();
+    }
     ob_start(); ?>
     <header>
         <div class="header-container">
@@ -11,9 +16,9 @@ function get_header($current_page)
             </div>
             <nav>
                 <ul id="main-navigation">
+                    <?php if (isset($_SESSION["user"])) : ?>
                     <li class="nav-item">
-                        <a href="terkep.php" <?php echo $current_page === "terkep" ? 'class="current-page"' : '' ?>>Szegedi
-                            áruházak</a>
+                        <a href="terkep.php" <?php echo $current_page === "terkep" ? 'class="current-page"' : '' ?>>Szegedi áruházak</a>
                     </li>
                     <li class="nav-item">
                         <a href="bevasarlo_lista.php" <?php echo $current_page === "bevasarlo_lista" ? 'class="current-page"' : '' ?>>Bevásárló lista</a>
@@ -25,11 +30,18 @@ function get_header($current_page)
                         <a href="bevasarlas_cikk.php" <?php echo $current_page === "bevasarlas_cikk" ? 'class="current-page"' : '' ?>>Bevásárlási szokások</a>
                     </li>
                     <li class="nav-item">
-                        <a href="regisztracio.php" <?php echo $current_page === "regisztracio.php" ? 'class="current-page"' : '' ?>>Regisztráció</a>
+                        <form action="index.php" method="post">
+                            <input type="submit" id="menu_logout" name="menu_logout" value="Kijelentkezés">
+                        </form>
+                    </li>
+                    <?php else: ?>
+                    <li class="nav-item">
+                        <a href="regisztracio.php" <?php echo $current_page === "regisztracio" ? 'class="current-page"' : '' ?>>Regisztráció</a>
                     </li>
                     <li class="nav-item">
-                        <a href="bejelentkezes.php" <?php echo $current_page === "bejelentkezes.php" ? 'class="current-page"' : '' ?>>Bejelentkezés</a>
+                        <a href="bejelentkezes.php" <?php echo $current_page === "bejelentkezes" ? 'class="current-page"' : '' ?>>Bejelentkezés</a>
                     </li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>

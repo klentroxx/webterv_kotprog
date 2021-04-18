@@ -1,17 +1,16 @@
-
-input{
+main input{
     margin: 10px;
 }
 
-input:required{
+main input:required{
     background-color: orangered;
 }
 
-input:focus{
+main input:focus{
     background-color: lightblue;
 }
 
-form{
+main form{
     font-family: Calibri, serif;
     font-size: large;
     width: fit-content;

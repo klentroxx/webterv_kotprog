@@ -68,18 +68,25 @@ header .header-container #main-navigation .nav-item {
     display: inline-flex;
 }
 
+header .header-container #main-navigation .nav-item input[type=submit],
 header .header-container #main-navigation .nav-item a {
     color: black;
     font-weight: 700;
     text-decoration: none;
     padding: 10px 25px;
     transition: color 300ms;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
+header .header-container #main-navigation .nav-item input[type=submit].current-page,
 header .header-container #main-navigation .nav-item a.current-page {
     color: var(--color-light-green);
 }
 
+header .header-container #main-navigation .nav-item input[type=submit]:hover,
 header .header-container #main-navigation .nav-item a:hover {
     color: var(--color-light-green);
 }

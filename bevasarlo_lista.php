@@ -1,5 +1,6 @@
 <?php
 include_once "tartalom.php";
+include_once "reg_session.php";
 ?>
 
 <!DOCTYPE html>
