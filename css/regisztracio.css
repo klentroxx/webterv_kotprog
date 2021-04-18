@@ -1,0 +1,65 @@
+#registration_container {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+fieldset {
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+legend {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.input_box {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input_box label {
+    margin-bottom: 5px;
+}
+
+.input_box input[type=number],
+.input_box input[type=tel],
+.input_box input[type=text],
+.input_box input[type=email],
+.input_box input[type=password] {
+    margin-bottom: 15px;
+    display: block;
+    max-width: 300px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background: #EEEEEE;
+}
+
+.input_box input[type=number]:focus,
+.input_box input[type=tel]:focus,
+.input_box input[type=text]:focus,
+.input_box input[type=email]:focus,
+.input_box input[type=password]:focus {
+    background: #FFFFFF;
+    border-color: var(--color-light-green);
+    outline: none;
+}
+
+input[type=submit] {
+    margin: auto;
+    display: flex;
+    font-size: 20px;
+    padding: 5px 40px;
+    background: var(--color-light-green);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+span.required {
+    color: #FF0000;
+}

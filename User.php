@@ -244,18 +244,19 @@ class User
             "felhasznalo_nev" => $this->username,
             "nev" => $this->name,
             "jelszo" => $this->password,
-            "telefon" => $this->password,
-            "email" => $this->password,
-            "iranyito_szam" => $this->password,
-            "varos" => $this->password,
-            "utca_nev" => $this->password,
-            "hazszam" => $this->password,
-            "emelet" => $this->password,
-            "ajto" => $this->password,
-            "kep" => $this->password
+            "telefon" => $this->phone,
+            "email" => $this->email,
+            "iranyito_szam" => $this->postalCode,
+            "varos" => $this->city,
+            "utca_nev" => $this->streetName,
+            "hazszam" => $this->streetNumber,
+            "emelet" => $this->floor,
+            "ajto" => $this->door,
+            "kep" => $this->image
         ];
         $file = fopen("users.txt", "a");
         fwrite($file, serialize($user));
+        fwrite($file, "\n");
         fclose($file);
     }
 
