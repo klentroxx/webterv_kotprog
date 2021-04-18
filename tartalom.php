@@ -1,7 +1,6 @@
 <?php
 function get_header($current_page)
 {
-    var_dump($_SESSION["user"]);
     if (isset($_POST["menu_logout"])) {
         session_unset();
         session_destroy();
