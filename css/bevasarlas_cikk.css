@@ -13,3 +13,6 @@ article{
     font-size: small;
 }
 
+article form {
+    margin: 20px 0;
+}

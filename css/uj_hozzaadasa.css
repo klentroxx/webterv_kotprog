@@ -1,17 +1,64 @@
-main input{
-    margin: 10px;
+main form {
+    width: 400px;
+    margin: auto;
+    padding: 50px 0;
 }
 
-main input:required{
-    background-color: orangered;
+main .form-input label {
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
-main input:focus{
-    background-color: lightblue;
+main .form-input input {
+    margin-bottom: 10px;
 }
 
-main form{
-    font-family: Calibri, serif;
-    font-size: large;
-    width: fit-content;
+main .form-input {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main .form-input.row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+main .input-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main .input-row .form-input {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    align-items: center;
+}
+
+main .input-row .form-input label {
+    margin: 0 10px 0 0;
+}
+main .input-row .form-input input {
+    margin: 0 10px 0 0;
+}
+
+main label[for=datetime_added] {
+    display: none;
+}
+
+main span.required {
+    color: #FF0000;
+}
+
+main fieldset {
+    margin-bottom: 10px;
+}
+
+main .required-warning {
+    margin-top: 100px;
+}
+
+main .message {
+    text-align: center;
 }

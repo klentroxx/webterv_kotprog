@@ -29,6 +29,9 @@ function get_header($current_page)
                         <a href="bevasarlas_cikk.php" <?php echo $current_page === "bevasarlas_cikk" ? 'class="current-page"' : '' ?>>Bevásárlási szokások</a>
                     </li>
                     <li class="nav-item">
+                        <a href="felhasznalo.php" <?php echo $current_page === "profil" ? 'class="current-page"' : '' ?>>Profil</a>
+                    </li>
+                    <li class="nav-item">
                         <form action="index.php" method="post">
                             <input type="submit" id="menu_logout" name="menu_logout" value="Kijelentkezés">
                         </form>

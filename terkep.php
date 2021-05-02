@@ -1,7 +1,9 @@
 <?php
 include_once "tartalom.php";
 include_once "reg_session.php";
-
+if (!isset($_SESSION["user"])) {
+    header("Location: bejelentkezes.php");
+}
 ?>
 
 <!DOCTYPE html>

@@ -1,4 +1,5 @@
 <?php
+
 include_once "tartalom.php";
 include_once "reg_session.php";
 
@@ -19,6 +20,9 @@ if (isset($_POST["login"])) {
         die("<strong>Hiba: </strong> Valamelyik mező nincs kitöltve! <a href='bejelentkezes.php'>Vissza a bejeletkezeshez</a>");
     }
 
+}
+if (isset($_SESSION["user"]) && !isset($_POST["logout"])) {
+    header("Location: felhasznalo.php");
 }
 
 if (isset($_POST["logout"])) {
@@ -69,19 +73,6 @@ if (isset($_POST["logout"])) {
                 </form>
 
             ';
-            } else {
-                echo (!empty($_SESSION["user"]->getImage()) ? '<img src="profil/' . $_SESSION["user"]->getImage() . '" alt="Felhasználó kép"/>' : "&nbsp;") .  '    
-                    <p>Név: ' . $_SESSION["user"]->getName() .
-                '</p>
-                    <p>Felhasználónév: ' . $_SESSION["user"]->getUsername() .
-                '</p>
-                    <form id="logout" action="bejelentkezes.php" method="post" enctype="multipart/form-data">
-                    <input type="submit" value="Kijelentkezés" name="logout"/>
-                    <br/>
-                    <br/>
-                    </form>
-                ';
-
             }
             ?>
         </div>

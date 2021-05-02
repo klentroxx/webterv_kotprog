@@ -1,0 +1,4 @@
+a:6:{s:4:"name";s:7:"Krumpli";s:8:"quantity";s:1:"1";s:11:"best_before";s:10:"2022-05-02";s:9:"important";s:9:"important";s:4:"unit";s:2:"kg";s:14:"datetime_added";s:20:"2021.05.02. 10:54:54";}a:6:{s:4:"name";s:9:"Gesztenye";s:8:"quantity";s:3:"0.4";s:11:"best_before";s:10:"2022-05-02";s:9:"important";s:9:"important";s:4:"unit";s:2:"kg";s:14:"datetime_added";s:20:"2021.05.02. 10:59:33";}
+a:6:{s:4:"name";s:7:"Kenyér";s:8:"quantity";s:3:"0.5";s:11:"best_before";s:10:"2021-05-08";s:9:"important";N;s:4:"unit";s:2:"kg";s:14:"datetime_added";s:20:"2021.05.02. 10:59:56";}
+a:6:{s:4:"name";s:3:"Vaj";s:8:"quantity";s:4:"0.15";s:11:"best_before";s:10:"2021-06-02";s:9:"important";s:9:"important";s:4:"unit";s:2:"kg";s:14:"datetime_added";s:20:"2021.05.02. 11:05:39";}
+a:6:{s:4:"name";s:8:"Szemetes";s:8:"quantity";s:1:"1";s:11:"best_before";s:0:"";s:9:"important";s:0:"";s:4:"unit";s:2:"db";s:14:"datetime_added";s:20:"2021.05.02. 11:39:15";}

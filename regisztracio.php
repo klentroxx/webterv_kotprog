@@ -1,6 +1,10 @@
 <?php
+
 include_once "tartalom.php";
 include_once "reg_session.php";
+if (isset($_SESSION["user"])) {
+    header("Location: felhasznalo.php");
+}
 $userExists = false;
 $message = "";
 
@@ -12,16 +16,16 @@ if (isset($_POST["registration"])) {
         die("<strong>HIBA:</strong> A felhasználónévnek legalább 6 karakter hosszúnak kell lennie! <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
     }
     if (strlen($_POST["jelszo"]) < 8) {
-        die("<strong>HIBA:</strong> A jelszónak legalább 6 karakter hosszúnak kell lennie! <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
-    }
-    if (strlen($_POST["jelszo"]) < 8) {
         die("<strong>HIBA:</strong> A jelszónak legalább 8 karakter hosszúnak kell lennie! <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
     }
-    if ($_POST["iranyito_szam"] < 1000 || $_POST["iranyito_szam"] > 9999) {
+    if (strlen($_POST["jelszo_ismet"]) < 8) {
         die("<strong>HIBA:</strong> A jelszónak legalább 8 karakter hosszúnak kell lennie! <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
     }
     if ($_POST["jelszo"] !== $_POST["jelszo_ismet"]) {
         die("<strong>HIBA:</strong> A megadott jelszavak nem egyeznek! <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
+    }
+    if ($_POST["iranyito_szam"] < 1000 || $_POST["iranyito_szam"] > 9999) {
+        die("<strong>HIBA:</strong> Az irányító szám helytelen. A helyes irányító szám formátuma 1000 és 9999 közötti szám. <a href='regisztracio.php'>Vissza a Regisztrációhoz</a>");
     }
     foreach ($_SESSION["regisztraltFelhasznalok"] as $user) {
         if ($user->getUsername() === $_POST["felhasznalo_nev"]) {
